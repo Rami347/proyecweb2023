@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*primera parte*/
+.contenedor{
+    background-color: indianred;
+}
+
+/*header*/
+header{
+    height: 100px;
+    background-color: indianred;
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: aqua;
+}
+
+#check{
+    display: none;
+}
+
+/*segunda parte*/
+
+.fondo1{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+     url(../img/Fondo1.jpg);
+    text-align: center;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h1{
+    color: white;
+    font-size: 1.5em;
+}
+
+/*tercera paret*/
+
+.hero1{
+    float: left;
+    padding: 15px;
+    width: 722px;
+    height: 200px;
+    margin: 0;
+    background-color: indianred;
+    text-align: center;
+}
+
+.hero2{
+    float: right;
+    padding: 15px;
+    width: 735px;
+    height: 200px;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(233, 207, 173);
+}
+
+/*cuarta parte*/
+
+.fondo2{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+     url(../img/Fondo2.jpg);
+    text-align: center;
+    height: 500px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+}
+
+.h3{
+    color: white;
+    font-size: 1.5em;
+}
+
+.h3 button{
+    color: white;
+    background-color: transparent;
+   
+    
+}
+
+.btn{
+    color: white;
+    border: 3px solid white;
+    border-radius: 0%;
+    padding: 20px;
+}
+
+/*quinta parte*/
+
+.contenedor2{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: rgb(239, 231, 231);
+}
+
+.icono{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.icono img{
+    max-width: 200px;
+}
+
+.texto{
+    width: 70%;
+    float: left;
+    padding: 20px;
+}
+
+.texto h3{
+    font-size: 1.5em;
+    line-height: 50px;
+    text-align: center;
+}
+
+.texto p{
+    text-align: justify;
+}
+
+/*sexta parte*/
+
+.contactos{
+    float: left;
+    padding: 10px;
+    width: 740px;
+    height: 200px;
+    background-color: rgb(233, 207, 173);
+    text-align: center;
+}
+
+.donde{
+    float: right;
+    padding: 10px;
+    width: 738px;
+    height: 200px;
+    background-color: indianred;
+    text-align: center;
+}
+
+/*responsive*/
+/*primera parte*/
+
+@media(max-width: 800px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.7s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    P{
+        margin-left: 40PX;
+        margin-right: 40PX;
+    }
+
+    /*SEGUNDA PARTE*/
+
+    .fondo1{
+       background-position: center;
+        height: 100%;
+    }
+
+    .h1{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+        font-size: large;
+    }
+
+    p{
+        font-size: smaller;
+    }
+
+    /*tercera parte*/
+
+    .hero{
+        width: 100%;
+
+    }
+
+    .hero1{
+        width: 46.2%;
+        padding-top:40px;
+        padding-bottom: 30px;
+    }
+
+    .hero2{
+        width: 46.2%;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        
+    }
+
+    /*cuarta parte*/
+
+    .fondo2{
+        height: 100%;
+    }
+
+    .h3{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+    }
+
+    p{
+        font-size: small;
+    }
+
+    .button{
+        border: 1px solid;
+        padding: 10px 10px 10px 10px;
+        
+    }
+
+    .btn{
+        font-size: x-small;
+        padding: 10px;
+    }
+
+    /*quinta parte*/
+
+    .contenedor2{
+        margin: 0;
+        padding: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .icono{
+        display: inline-block;
+        width: 49.7%;
+        
+    }
+
+    .icono img{
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .texto{
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .texto h3{
+        text-align: center;
+    }
+
+    .texto p{
+        text-align: center;
+    }
+
+    .icono img{
+        max-width: 120px;
+    }
+
+
+
+    /*sexta parte*/
+
+    .cont{
+        width: 100%;
+    }
+
+    .contactos{
+        width: 47.5%;
+        padding-top: 50px;
+        
+        
+    
+    }
+
+    .donde{
+        width: 47.4%;
+        padding-top: 50px;
+        
+    }
+}
+
+/*responsive 400*/
+/*primera parte*/
+
+@media screen and (max-width: 500px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.7s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    P{
+        margin-left: 40PX;
+        margin-right: 40PX;
+    }
+
+    /*SEGUNDA PARTE*/
+
+    .fondo1{
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .h1{
+        width: 100%;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+        font-size: large;
+    }
+
+    p{
+        font-size: smaller;
+    }
+
+    /*tercera parte*/
+
+    .hero{
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero1{
+        width: 100%;
+        padding: 0;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+
+    .hero2{
+        width: 100%;
+        padding: 0;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+
+    p{
+        padding: 30px;
+    }
+
+    /*cuarta parte*/
+
+    .fondo2{
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .h3{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+    }
+
+    p{
+        font-size: small;
+    }
+
+    .button{
+        border: 1px solid;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .btn{
+        color: white;
+        border: 2px solid white;
+        border-radius: 0%;
+        padding: 10px;
+        font-size: xx-small;
+        
+    }
+    /*quinta parte*/
+
+    .contenedor2{
+        margin: 0;
+        padding: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .icono{
+        display: inline-block;
+        width: 100%
+        
+    }
+
+    .icono img{
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .texto{
+        display: inline-block;
+        width: 90%;
+    }
+
+    .texto h3{
+        text-align: center;
+    }
+
+    .texto p{
+        text-align: center;
+    }
+
+    .icono img{
+        max-width: 120px;
+    }
+
+
+
+    /*sexta parte*/
+
+    .cont{
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactos{
+        width: 96%;
+        padding-top: 40px;
+        
+        
+    
+    }
+
+    .donde{
+        width: 100%;
+        padding-top: 50px;
+        
+    }
+}
+
+
+
+
